@@ -1,8 +1,6 @@
 {% extends "main/base.html" %}
 
-{% block title %}
-Poll page
-{% endblock %}
+{% block title %} Стариница опроса {% endblock %}
 
 {% load static %}
 
@@ -35,7 +33,7 @@ Poll page
         </div>
     {% endfor %}
 {% else %}
-    <p>No polls are available.</p>
+    <p>Нет доступных опросов</p>
 {% endif %}
 
 {% if messages %}

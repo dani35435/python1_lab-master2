@@ -3,13 +3,13 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
-<h3>Create a new Question</h3>
+<h3 style="color: gray">Создание нового вопроса</h3>
 <br>
-<form method="post" , action={% url 'polls:create' %} class="form-group">
+<form class="form-group" method="post" , action={% url 'polls:create' %}>
 {% csrf_token %}
 <div class="input-group mb-3">
     <div class="input-group-prepend">
-        <button name="save" , type="submit" , class="btn btn-success">Create</button>
+        <button name="save" , type="submit" , class="btn btn-success">Создание</button>
         {{form.name}}
     </div>
 </div>

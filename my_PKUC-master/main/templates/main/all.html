@@ -27,7 +27,7 @@ Poll page
     {% for question in ques %}
     <div class="card ">
         <h3>{{ question.question_text }}</h3>
-        <h5>Posted by : {{ question.user_id}}</h5>
+        <h5>Сообщение от : {{ question.user_id}}</h5>
         {% for choice in question.choices %}
             {{ choice.choice_text }} : {{ choice.votes }} vote{{ choice.votes|pluralize }}
                 <hr width={{choice.perc}}% style="border: 5px solid #FF8A00 !important;
@@ -37,7 +37,7 @@ Poll page
     </div> 
     {% endfor %}
 {% else %}
-    <p>No polls are available.</p>
+    <p>Нет доступных опросов</p>
 {% endif %}
 
 {% endblock %}
